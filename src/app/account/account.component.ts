@@ -6,8 +6,11 @@ import { AccountsService } from '../accounts.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService, AccountsService],
+  providers: [LoggingService],
 })
+  // The 'providers' array was previously like this ---->  providers: [LoggingService, AccountsService]
+  // 'AccountsService' was removed so as to not create another instance of the service.
+  
 export class AccountComponent {
   @Input() account: { name: string; status: string };
   @Input() id: number;
