@@ -6,7 +6,7 @@ import { AccountsService } from '../accounts.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService],
+  // providers: [LoggingService],
 })
   // The 'providers' array was previously like this ---->  providers: [LoggingService, AccountsService]
   // 'AccountsService' was removed so as to not create another instance of the service.
@@ -19,6 +19,6 @@ export class AccountComponent {
 
   onSetTo(status: string) {
     this.accountsService.updateStatus(this.id, status);
-    this.loggingService.logStatusChanged(status);
+    // this.loggingService.logStatusChanged(status);
   }
 }
